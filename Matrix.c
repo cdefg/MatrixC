@@ -4,6 +4,7 @@
 
 //this .c file include some important transform functions 
 //basic matrix calculation usually requires them 
+//the usage and descriptions are in the Matrix.h file
 
 
 matrix initMatrix(int m , int n){
