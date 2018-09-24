@@ -18,31 +18,22 @@ double Determinant(matrix T){
 }
 
 double Step(matrix T){
-	//Print(T);
-	//printf("---------1\n");
-	//printf("T.m : %d\n", T.m );//
 	if (T.m == 1){
 		return T.mat[0][0];
 	}
 	double multiplier = 1;
-	//printf("mut : %f\n", multiplier );//
 	//to proceed the matrix
 	if (T.mat[0][0] == 0){
 		int k;
-		//printf("mut : %f\n", multiplier );//
 		double isallzero;//if isallzero is 0, then return 0 directly
 		for (k = 0; k < T.m; k++){
 			isallzero += (T.mat[k][0])*(T.mat[k][0]);
-			//printf("k : %d , T.mat[k][0] : %f \n", k, T.mat[k][0]  );//
 			if (T.mat[k][0] != 0){
 				T = swapRow(T, 0, k);
-				multiplier *= -1;//incompleted
-				//Print(T);//
-				//printf("mut : %f\n", multiplier );//
+				multiplier *= -1;
 				break;
 			}
 		}
-		//printf("isallzero : %f\n",isallzero );
 		if (isallzero == 0){
 			return 0;
 		}
@@ -55,8 +46,6 @@ double Step(matrix T){
 		T = AddMultipliedRow(T, i, 0, -1 * T.mat[i][0]/T.mat[0][0]);
 	}//the first column has been transformed into zero except T.mat[0][0]
 	
-	//Print(T);
-	//printf("---------2\n");
 
 	matrix nextT = initMatrix(T.m - 1, T.m - 1);
 	int p, q;
@@ -65,7 +54,6 @@ double Step(matrix T){
 			nextT.mat[p][q] = T.mat[p + 1][q + 1];
 		}
 	}
-	//printf("---------3\n");
 
 	//copy the T into the next matrix to make recursion
 	return multiplier * T.mat[0][0] * Step(nextT);

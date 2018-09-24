@@ -77,12 +77,5 @@ matrix AddMultipliedCol(matrix T, int i, int j, double k);
 //generate a new matrix and return to it
 
 
-/*double Determinant(matrix T);
-//to calculate the Determinant for Matrix T
-//create and return a value 
-//Triangulate() is the main part, so this function will never run successfully unless Triangulate() runs stably
-matrix Triangulate(matrix T, int );
-//to get a Square Matrix into a Triangle Square Matrix
-//create a new matrix and return to it, T not modified*/
 
 #endif
