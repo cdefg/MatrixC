@@ -1,3 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Matrix.h"
+
+//this .c file include some important transform functions 
+//basic matrix calculation usually requires them 
+
+
 matrix initMatrix(int m , int n){
 
 	if (!(m > 0 || n > 0)){

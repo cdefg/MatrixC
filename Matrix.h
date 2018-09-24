@@ -1,7 +1,11 @@
+//this file include the struct data and the function prototype
+
 /*
  *struct : a matrix A [m x n]
  *row: m ; column : n ; array : mat
  */
+#ifndef _MATRIX_
+#define _MATRIX_
 
 typedef struct{
 	double ** mat;
@@ -80,3 +84,5 @@ matrix AddMultipliedCol(matrix T, int i, int j, double k);
 matrix Triangulate(matrix T, int );
 //to get a Square Matrix into a Triangle Square Matrix
 //create a new matrix and return to it, T not modified*/
+
+#endif
