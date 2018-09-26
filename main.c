@@ -33,13 +33,6 @@ int main(){
 	M.mat[3][3] = 9;
 
 
-	M.mat[0][4] = 9;
-	M.mat[1][4] = 6;
-	M.mat[2][4] = 2;
-	M.mat[3][4] = 3;
-
-
-
 	Print(M);
 	double detM = Determinant(M);
 	printf("%.6f\n", detM );
